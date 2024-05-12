@@ -1,0 +1,124 @@
+/* Basic styles */
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Container styles */
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 100vh;
+  background-image: url("../pexels-jadson-thomas-164235-542556.jpg");
+}
+
+/* Info section styles */
+.info-section {
+  font-family: candara;
+  flex: 1;
+  padding: 50px;
+  text-align: center;
+  color: #333; /* Set text color */
+}
+
+.info-section h1 {
+  color: rgb(218, 28, 28);
+  font-family: candara;
+  font-size: 3em;
+  margin-bottom: 20px;
+  font-weight: bold; /* Make title bold */
+}
+
+.info-section p {
+  color: black;
+  font-size: 1.2em;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+/* Social media icons */
+.social-media-icons {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.social-media-icons img {
+  width: 30px; /* Set icon size */
+  height: 30px;
+  margin: 0 10px; /* Add spacing between icons */
+}
+
+/* Form container styles */
+.form-container {
+  font-family: candara;
+  flex: 1;
+  padding: 40px;
+  background-color: rgba(220, 212, 212, 0.9); /* Set form background color */
+  border-radius: 5px; /* Add rounded corners to form */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
+}
+
+/* Form heading styles */
+.form-container center h1 {
+  font-size: 2em;
+  margin-bottom: 20px;
+  color: #333; /* Set heading color */
+}
+
+/* Input group styles */
+.input-group {
+  margin-bottom: 15px;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold; /* Make labels bold */
+}
+
+.input-group input[type="text"],
+.input-group input[type="email"],
+.input-group input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  box-sizing: border-box; /* Include padding in width calculation */
+}
+
+/* Submit button styles */
+.input-group input[type="submit"] {
+  background-color: #333; /* Set button background color */
+  color: #fff; /* Set button text color */
+  padding: 10px 20px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer; /* Indicate clickable element */
+}
+
+/* Submit button hover effect */
+.input-group input[type="submit"]:hover {
+  background-color: #222; /* Change button color on hover */
+}
+
+/* Login link styles */
+.form-container p {
+  text-align: center;
+}
+
+.form-container p a {
+  color: #333; /* Set link color */
+  font-weight: bold; /* Make link text bold */
+}
+
+/* Error message styles */
+.error-message {
+  background-color: #f00;
+  color: #fff;
+  padding: 10px;
+  border-radius: 3px;
+  margin-bottom: 15px;
+}

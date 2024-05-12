@@ -1,0 +1,181 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.space {
+  padding-bottom: 2vh;
+}
+.bgvideo {
+  height: 100%;
+  width: 100vw;
+}
+
+.video {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
+  filter: blur(2px);
+  overflow: hidden;
+}
+
+.login .container {
+  width: 25em;
+  height: 28em;
+  background-color: #ffffffc4;
+  position: absolute;
+  top: 11rem;
+  left: 10rem;
+  border-radius: 10px;
+}
+
+.login .container h1 {
+  padding: 10px;
+  font-family: var(--font5);
+  font-size: 1.8rem;
+}
+
+.login input {
+  margin-bottom: 2vh;
+  width: 95%;
+  font-family: var(--font4);
+  border: none;
+  border-radius: 4px;
+  background-color: #ffffffc4;
+}
+
+@media (min-width: 1064px) {
+  .login input {
+    height: 5vh;
+  }
+}
+
+.login input[type="text"]::placeholder {
+  padding: 1vw;
+}
+
+.button-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button-group button {
+  margin: 2em;
+  width: 8em;
+  height: 2.2em;
+  font-family: var(--font4);
+  background-color: black;
+  color: white;
+  border-radius: 5px;
+  border: none;
+}
+
+.login .container span {
+  font-family: var(--font4);
+  font-size: 1.3rem;
+}
+
+.login .container a {
+  font-family: var(--font4);
+  font-size: 1.2rem;
+}
+
+.website-info {
+  width: 50%;
+  position: absolute;
+  right: 5em;
+  bottom: 14em;
+}
+
+.website-info h1 {
+  color: crimson;
+  font-family: var(--font6);
+  font-size: 4.5rem;
+}
+
+.website-info p {
+  color: rgb(255, 255, 255);
+  font-family: var(--font4);
+  font-size: 1.5rem;
+}
+
+.icons {
+  margin-left: -4vw;
+}
+
+/* .icons ion-icon {
+  font-size: 2rem;
+  margin: 0.5em;
+  padding-left: 1em;
+  color: rgb(63, 61, 61);
+} */
+
+.icons img {
+  height: 2rem;
+  width: 2rem;
+  margin-left: 4rem;
+}
+
+.disclaimer p {
+  width: 80%;
+  position: relative;
+  top: 35em;
+  font-family: var(--font4);
+  font-size: 1.5rem;
+}
+
+/********************************* Media *********************************/
+@media (max-width: 1064px) {
+  .bgvideo {
+    display: none;
+  }
+  .login .container {
+    border-top: 5px;
+    width: 60%;
+    height: auto;
+    background-color: white;
+    border-radius: 10px;
+    left: 22vw;
+    font-size: 1.4rem;
+    box-shadow: 0 6px 7px rgba(0 0 0 /10%);
+  }
+
+  .login input {
+    height: 3vh;
+    font-size: auto;
+  }
+  .button-group button {
+    margin: 2vw;
+    width: 8em;
+    height: 2.2em;
+    font-family: var(--font4);
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    border: none;
+  }
+
+  .login .container span {
+    font-size: 1.5rem;
+  }
+
+  .login .container a {
+    font-size: 1.5rem;
+  }
+
+  .website-info {
+    display: none;
+  }
+  .website-info p {
+    color: black;
+    font-size: auto;
+  }
+  .disclaimer p {
+    width: 80%;
+    position: relative;
+    bottom: 0;
+  }
+}

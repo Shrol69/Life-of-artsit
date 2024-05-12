@@ -1,0 +1,263 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+nav {
+  background-color: transparent; /* Adjust background color as needed */
+  display: flex;
+  justify-content: flex-end; /* Align items to the right */
+  padding: 10px 20px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1; /* Place navbar above video background */
+}
+
+.logo {
+  font-size: 2rem; /* Adjust logo font size */
+  /* font-weight: bold; */
+  margin-right: auto;
+  margin-top: 10px; /* Move logo to the left */
+}
+.logo a {
+  text-decoration: none;
+  color: white;
+}
+
+.nav-links {
+  list-style: none;
+  margin: 1rem;
+  padding: 0;
+}
+
+.nav-links li {
+  position: relative;
+  display: inline-block;
+  margin: 0 10px; /* Add spacing between links */
+}
+
+.nav-links li::after {
+  content: "";
+  height: 1.8px;
+  width: 0;
+  background: black;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 25px;
+  bottom: -10px;
+  transition: 0.3s;
+}
+.nav-links li:hover::after {
+  width: 100%;
+}
+.nav-links a {
+  position: relative;
+  font-size: 1.2rem;
+  padding: 2rem;
+  text-decoration: none;
+  color: white; /* Adjust link color */
+}
+.dropdown {
+  position: relative; /* Needed for dropdown positioning */
+}
+
+.dropdown-menu {
+  display: none; /* Initially hide the dropdown menu */
+  position: absolute; /* Positions the menu relative to its parent */
+  top: 100%; /* Positions the menu below the dropdown button */
+  left: -15rem; /* Positions the menu to the left of the dropdown button */
+  background-color: #f5f5f5; /* Light background color */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
+  padding: 10px; /* Adds padding to menu items */
+  min-width: 180px; /* Sets minimum width for menu */
+  white-space: nowrap; /* Prevents text wrapping */
+  overflow: hidden; /* Hides overflowing text */
+  text-overflow: ellipsis; /* Adds ellipsis (...) for long names */
+}
+
+.dropdown:hover .dropdown-menu {
+  /* Show dropdown menu on hover */
+  display: block;
+}
+
+.dropdown-menu li {
+  margin: 5px 0; /* Adds spacing between artist links */
+}
+
+.dropdown-menu li a {
+  text-align: center; /* Center artist text */
+  color: #333; /* Adjust text color as needed */
+  font-family: Arial, sans-serif; /* Sans-serif font */
+}
+
+.video-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  z-index: -1; /* Place video behind other elements */
+}
+
+.video-background video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Stretch video to fill container */
+}
+
+.carousel-inner {
+  position: relative;
+  display: block;
+  left: 18rem;
+  top: 5rem;
+  width: 60% !important;
+}
+.carousel-control-prev {
+  left: 12% !important;
+  top: 30% !important;
+}
+
+.carousel-control-next {
+  right: 14.5% !important;
+  top: 30% !important;
+}
+.carousel-caption h5,
+.carousel-caption p {
+  color: white;
+}
+.explore h3 {
+  font-size: 3rem;
+  position: relative;
+  color: black;
+  top: 90px;
+  left: 32rem;
+}
+/* Main styles */
+main {
+  text-decoration: none;
+  padding-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; /* Center content vertically and horizontally */
+}
+
+/* Product styles */
+.products {
+  font-family: candara;
+  text-decoration: none;
+  columns: inherit;
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 67px;
+  margin: 0;
+  justify-content: center; /* Center products horizontally */
+}
+
+.product {
+  margin: 10px;
+  align-items: center;
+
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.product:hover {
+  transform: scale(1.05);
+}
+
+.product img {
+  align-items: center;
+  border: 2px solid #ddd;
+  background-color: white;
+  border-radius: 2px;
+  border-color: black;
+  padding: 25px;
+  margin-left: 4rem;
+  position: relative;
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+}
+
+.product .info {
+  text-decoration: none;
+  text-align: center;
+  color: black;
+  /* Changed product info text color to black */
+}
+.view_more {
+  font-size: 20px;
+  margin-left: 44.5rem;
+  position: relative;
+  top: -3rem;
+}
+.view_more button {
+  background: transparent;
+  border-radius: 8px;
+}
+.view_more button:hover {
+  background-color: rgb(214, 213, 213);
+}
+
+/* Styles for the upload button */
+.upload-button {
+  background-color: #e74c3c; /* Red */
+  color: white;
+  padding: 15px 40px; /* Increased padding for better text fit */
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  border-radius: 8px; /* Larger rounded corners */
+}
+
+/* Styles for the popup */
+.popup {
+  position: fixed;
+  z-index: 1;
+  left: 375px;
+  top: 116px;
+  width: 50%;
+  height: auto;
+  overflow: auto;
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.8
+  ); /* Example for a black background */
+  padding: 40px;
+  text-align: center;
+}
+
+.popup content {
+  background-color: #f2f2f2; /* Light gray background */
+  padding: 30px; /* Increased padding for content */
+  width: 50%; /* Wider content area */
+  border-radius: 10px; /* Rounded corners */
+  margin-left: 5rem; /* Centered horizontally */
+}
+
+/* Style for the upload link (optional) */
+.upload-link {
+  background-color: #2ecc71; /* Green */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  cursor: pointer;
+}
+#uploadButton.upload-button {
+  background-color: black;
+  margin-right: 35rem;
+  margin-left: -9.5rem;
+}

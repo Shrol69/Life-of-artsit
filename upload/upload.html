@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Life of Artist - Upload Artwork</title>
+    <link rel="stylesheet" href="upload.css" />
+  </head>
+  <body>
+    <div class="video-background">
+      <video autoplay muted loop>
+        <source
+          src="../upload/1085993-hd_1920_1080_25fps.mp4"
+          type="video/mp4"
+        />
+      </video>
+    </div>
+    <div class="wrapper">
+      <div class="upload-container">
+        <h1>Life of Artist - Upload Artwork</h1>
+        <form
+          action="upload.php"
+          method="post"
+          enctype="multipart/form-data"
+          class="upload-form"
+        >
+          <div class="upload-zone">
+            <p>Drag & Drop your artwork here or</p>
+            <label for="artwork">Click to Select</label>
+            <input
+              type="file"
+              id="artwork"
+              name="artwork"
+              accept=".jpg,.jpeg,.png"
+              required
+            />
+          </div>
+          <br />
+          <div class="title">
+            <label for="title">Title:</label>
+            <input type="text" id="title" name="title" />
+          </div>
+          <div class="description">
+            <label for="description">Description:</label>
+            <textarea id="description" name="description" rows="5"></textarea>
+          </div>
+          <div class="submit">
+            <button type="submit">Share Your Creation</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

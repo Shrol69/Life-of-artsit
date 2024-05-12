@@ -1,0 +1,197 @@
+body {
+  font-family: "candara", cursive; /* Elegant cursive font */
+  background-color: #f5f3f0; /* Light cream background */
+  margin: 0;
+  padding: 0;
+}
+nav {
+  background-color: transparent; /* Adjust background color as needed */
+  display: flex;
+  justify-content: flex-end; /* Align items to the right */
+  padding: 10px 20px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1; /* Place navbar above video background */
+}
+
+.logo {
+  font-size: 2rem; /* Adjust logo font size */
+  /* font-weight: bold; */
+  margin-right: auto;
+  margin-top: 10px; /* Move logo to the left */
+}
+.logo a {
+  text-decoration: none;
+  color: white;
+}
+
+.nav-links {
+  list-style: none;
+  margin: 1rem;
+  padding: 0;
+}
+
+.nav-links li {
+  position: relative;
+  display: inline-block;
+  margin: 0 10px; /* Add spacing between links */
+}
+
+.nav-links li::after {
+  content: "";
+  height: 1.8px;
+  width: 0;
+  background: black;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 22px;
+  bottom: -10px;
+  transition: 0.3s;
+}
+.nav-links li:hover::after {
+  width: 100%;
+}
+.nav-links a {
+  position: relative;
+  font-size: 1.2rem;
+  padding: 2rem;
+  text-decoration: none;
+  color: white; /* Adjust link color */
+}
+.dropdown {
+  position: relative; /* Needed for dropdown positioning */
+}
+
+.dropdown-menu {
+  display: none; /* Initially hide the dropdown menu */
+  position: absolute; /* Positions the menu relative to its parent */
+  top: 100%; /* Positions the menu below the dropdown button */
+  left: -15rem; /* Positions the menu to the left of the dropdown button */
+  background-color: #f5f5f5; /* Light background color */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
+  padding: 10px; /* Adds padding to menu items */
+  min-width: 180px; /* Sets minimum width for menu */
+  white-space: nowrap; /* Prevents text wrapping */
+  overflow: hidden; /* Hides overflowing text */
+  text-overflow: ellipsis; /* Adds ellipsis (...) for long names */
+}
+
+.dropdown:hover .dropdown-menu {
+  /* Show dropdown menu on hover */
+  display: block;
+}
+
+.dropdown-menu li {
+  margin: 5px 0; /* Adds spacing between artist links */
+}
+
+.dropdown-menu li a {
+  text-align: center; /* Center artist text */
+  color: #333; /* Adjust text color as needed */
+  font-family: candara; /* Sans-serif font */
+}
+header {
+  text-align: center;
+  padding: 30px 0;
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHZpZXdwb3J0PSImbm9uZGV4IiB4bWxuczphPSJodHRwOi8vbnMuYWRvYmVuLWNvbS5jb20vQWRvYmVGUmxlLzE5OTggLyI+CiAgPHJlY3QgY29sb3I9IiNmOWY5ZjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiLz4KPC9zdmctPg=="); /* Subtle background pattern */
+}
+
+header h1 {
+  font-size: 4em; /* Large heading */
+  color: #333; /* Dark text */
+  margin: 0;
+  letter-spacing: 2px; /* Slight letter spacing */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+}
+
+header h2 {
+  font-size: 1.5em; /* Smaller subheading */
+  color: #999; /* Lighter text */
+  margin: 10px 0;
+}
+
+main {
+  padding: 20px;
+}
+
+section {
+  margin-bottom: 40px;
+  border-top: 1px solid #ddd; /* Light border */
+  padding-top: 20px;
+}
+
+section h3 {
+  font-size: 2em;
+  color: #333;
+  margin-bottom: 10px;
+  text-decoration: underline; /* Underline for emphasis */
+}
+
+section p {
+  line-height: 1.5; /* Increased line-spacing for readability */
+  font-size: 1em;
+  color: #666; /* Paragraph text color */
+  text-align: justify; /* Justified text for alignment */
+}
+
+section a {
+  color: #007bff; /* Blue link color */
+  text-decoration: none; /* Remove underline */
+  border-bottom: 1px dotted #007bff; /* Dotted underline on hover */
+  transition: all 0.2s ease-in-out; /* Smooth transition on hover */
+}
+
+section a:hover {
+  color: #0062cc; /* Darker blue on hover */
+}
+
+.featured-work {
+  display: flex;
+  flex-wrap: wrap; /* Wrap artwork articles on smaller screens */
+  justify-content: space-between; /* Space artwork articles evenly */
+}
+
+.artwork {
+  width: 30%; /* Adjust width as needed */
+  margin: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  overflow: hidden; /* Clip overflowing image content */
+}
+
+.artwork img {
+  width: 100%;
+  height: auto; /* Maintain aspect ratio */
+  transition: all 0.2s ease-in-out; /* Smooth transition on image hover */
+}
+
+.artwork img:hover {
+  filter: brightness(1.1); /* Slightly increase brightness on hover */
+}
+
+.artwork p {
+  padding: 10px;
+  font-size: 0.8em; /* Slightly smaller text for captions */
+  text-align: center;
+}
+
+.contact {
+  text-align: center;
+  font-style: italic; /* Italic text for a personal touch */
+}
+
+footer {
+  text-align: center;
+  padding: 10px;
+  background-color: #ddd;
+}
+.work-container {
+  display: flex;
+  flex-wrap: wrap; /* Allow artworks to wrap to next line if needed */
+  justify-content: space-between; /* Distribute artworks evenly with space in between */
+}
+.artist-portrait {
+  margin-top: 5rem;
+}

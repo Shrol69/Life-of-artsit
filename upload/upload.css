@@ -1,0 +1,97 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5; /* Light background */
+}
+.video-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  z-index: -1; /* Place video behind other elements */
+}
+
+.video-background video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Stretch video to fill container */
+}
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full viewport height */
+}
+
+.upload-container {
+  border: 1px solid #ddd; /* Light border */
+  padding: 20px;
+  border-radius: 5px;
+  background-color: rgb(237, 237, 237, 0.8); /* White background */
+  width: 600px; /* Adjust width as needed */
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+.upload-zone {
+  border: 2px dashed #a7a4a4; /* Dashed border for drop zone */
+  padding: 20px;
+  border-radius: 5px;
+  cursor: pointer; /* Indicate hover interaction */
+}
+
+.upload-zone p {
+  margin-bottom: 10px;
+}
+
+.upload-zone label {
+  display: inline-block;
+  margin-bottom: 5px;
+  background-color: #007bff; /* Blue background for click label */
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.upload-zone input[type="file"] {
+  display: none; /* Hide the default file input */
+}
+
+.title,
+.description {
+  margin-top: 20px;
+}
+
+.title label,
+.description label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.description textarea {
+  width: 100%;
+}
+
+.submit {
+  margin-top: 20px;
+}
+
+.submit button {
+  background-color: #007bff; /* Blue button */
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.submit button:hover {
+  background-color: #0069d9; /* Darker blue hover effect */
+}
